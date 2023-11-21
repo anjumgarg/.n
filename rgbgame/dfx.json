@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "rgbgame_backend": {
+      "main": "src/rgbgame_backend/main.mo",
+      "type": "motoko"
+    },
+    "rgbgame_frontend": {
+      "dependencies": [
+        "rgbgame_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/rgbgame_frontend/src/index.html"
+      },
+      "source": [
+        "src/rgbgame_frontend/assets",
+        "dist/rgbgame_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
